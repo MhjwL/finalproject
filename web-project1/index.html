@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السوق العقاري</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="language-switcher">
+                <button id="switch-ar">عربي</button>
+                <button id="switch-en">English</button>
+            </div>
+            
+            <div class="logo" data-key="logo">السوق العقاري</div>
+            <div class="nav-links">
+                <a href="#home" data-key="home">الرئيسية</a>
+                <!-- Real-Market -->
+                <a href="#about" data-key="about">عن الشركة</a>
+                <a href="#properties" data-key="properties">عرض العقارات</a>
+                <a href="#consultation" data-key="consultation">طلب استشارة</a>
+                <a href="#contact-form-section" data-key="contact">اتصل بنا</a>
+            </div>
+            <div class="login-button">
+                <a href="php/login.php" data-key="login">تسجيل الدخول</a>
+            </div>
+        </nav>
+        
+    </header>
+    
+    <div class="slider" id="home">
+        <div class="slides">
+            <div class="slide">
+                <img src="images/slider1.avif" alt="سلايدر 1" >
+                <div class="caption" data-key="sliderCaption1">مرحبًا بكم في السوق العقاري</div>
+            </div>
+            <div class="slide">
+                <img src="images/slider2.avif" alt="سلايدر 2" style="width:100%;">
+                <div class="caption" data-key="sliderCaption2">اكتشف عقارات أحلامك هنا</div>
+            </div>
+            <div class="slide">
+                <img src="images/slider5.avif" alt="سلايدر 3" style="width:100%;">
+                <div class="caption" data-key="sliderCaption3">خيارات متعددة تلبي جميع احتياجاتك</div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <button class="prev" onclick="moveSlide(-1)">&#10094;></button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+    <section class="intro-section" id="about">
+        <div class="container">
+            <img src="images/slider4.avif" alt="معلومات عن السوق العقاري" >
+            <div class="intro-text">
+                <h2 data-key="introTitle1" >مرحبًا بكم في السوق العقاري</h2>
+                <p data-key="introDesc1">اكتشف منزل أحلامك من بين آلاف العقارات المتاحة على منصتنا. نحن نقدم لك الدعم الكامل لجعل رحلة البحث عن عقار أسهل وأسرع.</p>
+            </div>
+        </div>
+            <div class="aboutTitlee">
+                <h2 data-key="aboutTitle2">عن السوق العقاري</h2>
+                <p data-key="aboutDesc2">
+                    في السوق العقاري، نفخر بتقديم خدمات متميزة في مجال بيع الأراضي والعقارات. نعمل جاهدين لنوفر لعملائنا تجربة شاملة ومريحة، سواء كانوا يبحثون عن عقار للسكن أو للاستثمار التجاري. مع خبرتنا الطويلة في السوق، نضمن لكم إيجاد العقار المثالي الذي يلبي جميع متطلباتكم.
+                </p>
+                <!-- يمكن إضافة المزيد من المحتوى هنا حسب الحاجة -->
+            </div>
+       
+    </section>
+    
+    <section class="properties-section" id="properties">
+        <div class="container">
+            <!-- كارد عقار مثال -->
+            <div class="property-card">
+                <img src="images/slider2.avif" alt="عقار 1">
+                <div class="property-info">
+                    <h3 data-key="property1"> عقار رائع </h3>
+                    <p data-key="property2">وصف مختصر للعقار هنا.</p>
+                    <a href="#" class="more-info" data-key="property3">المزيد من المعلومات</a>
+                </div>
+            </div>
+            <!-- يمكنك إضافة المزيد من كاردات العقارات -->
+            <div class="property-card">
+                <img src="images/slider5.avif" alt="عقار 1">
+                <div class="property-info">
+                    <h3 data-key="property1">عقار رائع</h3>
+                    <p data-key="property2">وصف مختصر للعقار هنا.</p>
+                    <a href="#" class="more-info" data-key="property3">المزيد من المعلومات</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="images/slider6.avif" alt="عقار 2">
+                <div class="property-info">
+                    <h3 data-key="property1">عقار رائع</h3>
+                    <p data-key="property2">وصف مختصر للعقار هنا.</p>
+                    <a href="#" class="more-info" data-key="property3">المزيد من المعلومات</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="images/slider1.avif" alt="عقار 3">
+                <div class="property-info">
+                    <h3 data-key="property1">عقار رائع</h3>
+                    <p data-key="property2">وصف مختصر للعقار هنا.</p>
+                    <a href="#" class="more-info" data-key="property3">المزيد من المعلومات</a>
+                </div>
+            </div>
+            <div class="property-card pr-ca" >
+            <button id="addPropertyBtn" class="addPropertyFormBtn" data-key="property2" >إضافة عقار جديد</button>
+        </div>
+            <div id="addPropertyForm" style="display: none;" class="addPropertyForm2">
+                <form id="addPropertyForm" class="addProperty-form" method="post" action="php/addProperty.php">
+                    <label for="Adress" data-key="property3">عنوان العقار</label>
+                    <input type="text" name="title"  required>
+                    <label for="Adress2" data-key="property4">وصف العقار</label>
+                    <textarea name="description"  required></textarea>
+                    <label for="Adress3" data-key="property5">السعر</label>
+                    <input type="number" name="price"required>
+                    <input type="file" name="image" required >
+                    <input type="submit" data-key="property6">إضافة عقار</button>
+                </form>
+            </div>
+                
+        </div>
+    </section>
+    
+    <section class="search-section" id="consultation">
+        <h2 data-key="section1">ابحث عن أفضل الأحياء</h2>
+        <form id="searchForm" method="post" >
+            <label for="services" data-key="section2">الخدمات:</label>
+            <select id="services">
+                <option value="all" data-key="section3">الكل</option>
+                <option value="shopping" data-key="section4">  مراكز تسوق  </option>
+                <option value="schools" data-key="section5">مدارس</option>
+                <option value="hospitals" data-key="section6">مستشفيات</option>
+            </select>
+
+            <label for="budget" data-key="section7">الميزانية:</label>
+            <select id="budget">
+                <option value="all" data-key="section3">الكل</option>
+                <option value="low" data-key="section9">منخفضة</option>
+                <option value="medium" data-key="section10">متوسطة</option>
+                <option value="high" data-key="section11">عالية</option>
+            </select>
+
+            <label for="saleSpeed" data-key="section12">سرعة البيع:</label>
+            <select id="saleSpeed">
+                <option value="all" data-key="section3">الكل</option>
+                <option value="fast" data-key="section14">سريع</option>
+                <option value="normal" data-key="section15">متوسط</option>
+                <option value="slow" data-key="section16">بطيء</option>
+            </select>
+
+            <button type="button" onclick="filterDistricts()" data-key="section17">بحث</button>
+        </form>
+    </section>
+
+    <section id="results" class="results-section">
+ 
+    </section>
+
+    <section class="contact-form-section" id="contact-form-section">
+        <div class="container">
+            <h2 style="text-align:center;" data-key="link"><a href="contact.html" style="text-decoration: none;" >  تواصل معنا </a></h2>
+        </div>
+    </section>
+    
+
+    <footer id="contact">
+        <div class="footer-container">
+        <div class="footer-section">
+        <h4  data-key="contact2">عن السوق العقاري</h4>
+        <p data-key="aboutTitle-tt">منصتك الأولى للبحث عن عقارات سكنية وتجارية. نقدم لك أفضل الخيارات المتاحة وفقاً لاحتياجاتك.</p>
+        </div>
+        <div class="footer-section">
+        <h4 data-key="contact3">روابط سريعة</h4>
+        <ul>
+        <li><a href="#home" data-key="home" >الرئيسية</a></li>
+        <li><a href="#about" data-key="about" >عن الشركة</a></li>
+        <li><a href="#properties" data-key="properties">عرض العقارات</a></li>
+        <li><a href="#" data-key="contact7">اتصل بنا</a></li>
+        </ul>
+        </div>
+        <div class="footer-section">
+        <h4 data-key="contact8">تواصل معنا</h4>
+        <p data-key="contact9">للحصول على المساعدة والدعم، يرجى التواصل معنا عبر:</p>
+        <p data-key="contact10"> Email :<a href="mailto:satw.888@gmail.com">satw.888@gmail.com</a></p>
+        <p data-key="contact11">الهاتف: +123 456 7890</p>
+        </div>
+        </div>
+        
+        </footer>    
+
+
+<script src="js/script.js"></script>
+
+<noscript>
+    The browser does not support Js
+    </noscript>
+</body>
+</html>
+

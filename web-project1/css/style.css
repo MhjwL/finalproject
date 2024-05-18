@@ -1,0 +1,637 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    direction: rtl;
+
+}
+html {
+    scroll-behavior: smooth;
+    transition: 5ms;
+}
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+}
+
+header nav {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-links a, .login-button a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+}
+
+.login-button a {
+    background-color: #f8f8f8;
+    color: #0056b3;
+    font-weight: bold; 
+}
+
+.nav-links a:hover, .login-button a:hover {
+    background-color: #ffffff;
+    color: #0056b3; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.caption {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* ضبط دقيق لموقع النص */
+    color: #eaeaea; /* تغيير لون النص لزيادة الوضوح */
+    font-size: 24px; /* زيادة حجم الخط */
+    padding: 12px 24px; /* توسيع الحشوة للنص */
+    background-color: rgba(0, 56, 128, 0.7); /* تغيير لون الخلفية وجعلها شبه شفافة */
+    border-radius: 10px; /* جعل حواف الخلفية مدورة */
+    width: max-content; /* تعديل عرض الخلفية بناءً على المحتوى */
+    max-width: 80%; /* تحديد العرض الأقصى للنص لضمان التناسق */
+    text-align: center; /* توسيط النص */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل للنص لتعزيز القراءة */
+    font-weight: bold; /* جعل الخط غامق */
+}
+.slides {
+   
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides .slide img {
+    /* تحديد الارتفاع لضمان الملائمة */
+    object-fit: cover; /* ضبط الصورة لتغطية المساحة بالكامل */
+}
+
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0099cc;
+    color: #fff;
+    font-size: 24px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+/*about*/
+
+.intro-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+.intro-section .intro-text,
+.intro-section .aboutTitlee{
+padding-right: 30px;
+text-align: center;
+}
+.intro-section img {
+    width: 50%; /* أو أي حجم تفضله */
+    height: auto; /* للحفاظ على نسب الأبعاد */
+    border-radius: 20%; /* جعل الصورة دائرية */
+    object-fit: cover; /* ضمان تغطية المساحة المحددة */
+    max-width: 400px; /* تحديد الحد الأقصى لعرض الصورة */
+    margin-right: 30px; /* إضافة هامش بين الصورة والنص */
+}
+
+
+.intro-text {
+    width: 45%; /* ترك مساحة للتنفس بين الصورة والنص */
+}
+
+.intro-text h2 {
+    color: #0056b3;
+}
+
+.intro-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.intro-section .aboutTitlee {
+    width: 100%;
+background-color: #004199;
+color: white;
+padding: 20px;
+margin-top: -100px;
+margin-bottom: 50px;
+}
+
+/*cards*/
+.properties-section .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.property-card {
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px; /* مدور الحواف */
+    overflow: hidden; /* يحافظ على الصورة داخل الحدود المدورة */
+}
+
+.property-card img {
+    width: 100%;
+    height: 40%;
+   
+    object-fit: cover; /* يضمن تغطية الصورة للمساحة المحددة بالكامل */
+}
+
+.property-card {
+    
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    direction: rtl; /* توجيه النص من اليمين إلى اليسار */
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 15px;
+}
+
+.property-info h3, .property-info p {
+    margin: 10px 0;
+}
+.property-info .more-info {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+
+.results-section p {
+    color: #333;
+    font-size: 16px;
+}
+
+.results-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px; /* يضيف مسافة بين الكاردات */
+}
+
+.property-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 40px); /* يضمن توزيع ثلاث كاردات بشكل متساو في الصف */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* يضيف ظل للكارد لإعطائه عمق */
+    transition: transform 0.2s; /* يضيف تأثير عند تحريك الكارد */
+    
+}
+
+.property-card:hover {
+    transform: scale(1.05); /* يكبر الكارد قليلاً عند تمرير الماوس فوقه */
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px; /* ارتفاع ثابت للصور للحفاظ على تناسق الكاردات */
+    object-fit: cover; /* يضمن تغطية الصورة للمساحة المخصصة دون تشوه */
+}
+
+.property-info {
+    padding: 15px;
+}
+
+.property-info h3 {
+    margin-top: 0;
+    color: #007bff; /* لون لعنوان الكارد */
+}
+
+.property-info p {
+    color: #555; /* لون للوصف */
+}
+.properties-section .container .pr-ca {
+    height: 70px;
+}
+
+.properties-section .container .addPropertyFormBtn {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 500;
+   
+   
+}
+
+.properties-section .addPropertyForm2 .addProperty-form input {
+    width: 20px;
+height: 10px;
+
+}
+
+/* consultation */
+.search-section {
+    width: 100vw;
+    height: 100vh;
+    background: url(/images/sider1.png);
+    margin-top: 500px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.search-section h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+#searchForm {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.results-section {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.search-section label, select {
+    margin: 0 5px;
+    display: block;
+}
+
+.search-section button {
+    margin-top: 5px;
+    margin-left: -5px;
+    padding: 5px 10px;
+}
+/* تأكيد على استكمال CSS */
+.search-section select, button {
+    cursor: pointer;
+}
+
+.search-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.search-section h2 {
+    padding-top: 50px;
+}
+.search-section #searchForm {
+    padding-top: 50px;
+}
+
+
+.search-section .results-section p {
+    color: #333;
+    font-size: 16px;
+}
+
+.search-section .results-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px; /* يضيف مسافة بين الكاردات */
+}
+
+.search-section .property-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 40px); /* يضمن توزيع ثلاث كاردات بشكل متساو في الصف */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* يضيف ظل للكارد لإعطائه عمق */
+    transition: transform 0.2s; /* يضيف تأثير عند تحريك الكارد */
+}
+
+.search-section .property-card:hover {
+    transform: scale(1.05); /* يكبر الكارد قليلاً عند تمرير الماوس فوقه */
+}
+
+
+/*footer*/
+
+footer {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+    margin: 5px 0;
+    list-style-type: none; /* إزالة نقاط القائمة */
+}
+
+.footer-section a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* إضافة تأثير عند تمرير الماوس */
+}
+/*contact*/
+
+.contact-form-section {
+    background-color: #f0f0f0; /* خلفية للفصل بين القسم وبقية المحتوى */
+    padding: 40px 20px;
+}
+
+.contact-form-section {
+    direction: rtl; /* توجيه النص من اليمين إلى اليسار */
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+}
+
+.contact-form-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section h2, .form-group label, .form-group input, .form-group textarea, button[type="submit"] {
+    text-align: right; /* محاذاة النصوص والعناصر إلى اليمين */
+}
+
+.form-group {
+    margin-bottom: 20px; /* مسافة بين حقول الفورم */
+}
+
+.form-group label {
+    display: block; /* يجعل الليبل فوق الحقل مباشرة */
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%; /* يستغل العرض الكامل للحاوية */
+    padding: 10px; /* حشو داخلي لراحة الكتابة */
+    border: 1px solid #ddd; /* حدود خفيفة */
+    border-radius: 5px; /* حواف مدورة */
+}
+
+button[type="submit"] {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* يظهر المؤشر كيد عند المرور فوق الزر */
+}
+
+button[type="submit"]:hover {
+    background-color: #004199; /* تغميق اللون عند تمرير الماوس */
+}
+
+/*lang*/
+
+.language-switcher {
+    /* تنسيقات بسيطة لمفتاح التبديل */
+    text-align: center;
+    margin: 10px;
+}
+
+.language-switcher button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+/* new page */
+
+.properties-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.property-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 15px;
+}
+
+
+
+.properties-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.property-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 15px;
+}
+
+#addPropertyForm {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#addPropertyForm input, #addPropertyForm textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#addPropertyBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#addPropertyBtn:hover {
+    background-color: #0056b3;
+}
+
+.about-company-section {
+    padding: 20px;
+    background-color: #f7f7f7; /* لون خلفية القسم */
+}
+
+.about-company-section .container {
+    max-width: 1200px; /* أقصى عرض للمحتوى داخل القسم */
+    margin: 0 auto; /* لتوسيط القسم */
+}
+
+.about-company-section h2 {
+    text-align: center; /* لجعل العنوان في المنتصف */
+    margin-bottom: 20px; /* لإضافة مسافة تحت العنوان */
+}
+
+.about-company-section p {
+    font-size: 18px; /* حجم الخط للنص */
+    line-height: 1.6; /* لتحسين قراءة النص */
+}
+
+/* تنسيقات عامة للفورم */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%; /* جعل العناصر تأخذ العرض الكامل للمحتوى */
+    padding: 10px;
+    border: 1px solid #ddd; /* حدود بسيطة */
+    border-radius: 5px; /* تدوير الحواف */
+    margin-bottom: 10px;
+}
+
+.form-group textarea {
+    resize: vertical; /* يسمح بتغيير حجم النص في الاتجاه العمودي فقط */
+}
+
+/* تنسيق زر الإرسال */
+button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #5cb85c; /* لون خلفية الزر */
+    border: none;
+    border-radius: 5px;
+    color: white; /* لون النص */
+    cursor: pointer; /* تغيير مؤشر الماوس */
+    font-size: 16px;
+    transition: background-color 0.3s; /* تأثير انتقالي عند تغيير الخلفية */
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c; /* تغيير لون الخلفية عند تمرير الماوس */
+}
+
+/* تنسيق خاص لقسم تسجيل الدخول */
+.login-section {
+    max-width: 400px;
+    margin: 30px auto; /* توسيط القسم وإضافة هوامش حوله */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للقسم */
+    border-radius: 8px; /* تدوير حواف القسم */
+}
+
+.login-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* إضافة تنسيقات للنصوص الإضافية أو الروابط في القسم إذا لزم الأمر */
+.additional-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.additional-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.additional-text a:hover {
+    text-decoration: underline;
+}

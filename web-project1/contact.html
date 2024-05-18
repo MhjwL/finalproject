@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>السوق العقاري</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header>
+        <nav>
+            <div class="language-switcher">
+                <button id="switch-ar">عربي</button>
+                <button id="switch-en">English</button>
+            </div>
+            
+            <div class="logo" data-key="logo">السوق العقاري</div>
+            <div class="nav-links">
+                <a href="index.html" data-key="home">الرئيسية</a>
+                <a href="index.html" data-key="about">عن الشركة</a>
+                <a href="index.html" data-key="properties">عرض العقارات</a>
+                <a href="index.html" data-key="consultation">طلب استشارة</a>
+                <a href="index.html" data-key="contact">اتصل بنا</a>
+            </div>
+            <div class="login-button">
+                <a href="index.html" data-key="login">تسجيل الدخول</a>
+            </div>
+        </nav>
+        
+    </header>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <h2>تواصل معنا</h2>
+            <form action="contact.php" method="post">
+                <div class="form-group">
+                    <label for="name">الاسم:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">الرسالة:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+        <div class="footer-section">
+        <h4>عن السوق العقاري</h4>
+        <p>منصتك الأولى للبحث عن عقارات سكنية وتجارية. نقدم لك أفضل الخيارات المتاحة وفقاً لاحتياجاتك.</p>
+        </div>
+        <div class="footer-section">
+        <h4>روابط سريعة</h4>
+        <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="index.html">عن الشركة</a></li>
+        <li><a href="index.html">عرض العقارات</a></li>
+        <li><a href="index.html">اتصل بنا</a></li>
+        </ul>
+        </div>
+        <div class="footer-section">
+        <h4>تواصل معنا</h4>
+        <p>للحصول على المساعدة والدعم، يرجى التواصل معنا عبر:</p>
+        <p data-key="contact10"> Email :<a href="mailto:satw.888@gmail.com">satw.888@gmail.com</a></p>
+        <p>الهاتف: +123 456 7890</p>
+        </div>
+        </div>
+        
+        </footer> 
+        <script src="js/script.js"></script>
+        
+<noscript>
+    The browser does not support Js
+    </noscript>
+</body>
+</html>
